@@ -2,12 +2,12 @@ const { spawn } = require("child_process");
 const path = require("path");
 const fs = require("fs");
 
-const flaskDir = path.resolve(__dirname, "..", "..", "resume-evaluator");
+const flaskDir = path.resolve(__dirname, "..", "..", "backend");
 const flaskPython = path.join(flaskDir, ".venv", "Scripts", "python.exe");
 
 if (!fs.existsSync(flaskPython)) {
   console.error("Could not find Flask's Python at:", flaskPython);
-  console.error("Check that resume-evaluator/.venv exists.");
+  console.error("Check that backend/.venv exists.");
   process.exit(1);
 }
 
