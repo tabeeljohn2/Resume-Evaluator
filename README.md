@@ -1,18 +1,15 @@
-# AI Resume Evaluator
+# Resume Evaluator
 
-An AI-powered resume evaluator with a Flask + LangChain + Gemini backend
-and a Next.js frontend.
+An AI-powered web app that analyzes resumes and returns structured feedback and a score. The Flask backend handles resume processing and evaluation, and the Next.js frontend provides the upload interface and results page.
 
 ## Structure
 
+- `backend/` : Flask API
+- `frontend/` : Next.js app
 
-## Setup
+## Run locally
 
-See `backend/README.md` and `frontend/README.md` for setup instructions
-for each half of the project.
-
-## Quick start
-
-1. Set up and run the backend (see `backend/README.md`)
-2. Set up and run the frontend (see `frontend/README.md`)
-3. Open http://localhost:3000
+1. Backend: create a venv in `backend/`, then `pip install -r requirements.txt`
+2. Frontend: run `npm install` in `frontend/`
+3. Create `backend/.env` and `frontend/.env.local` with your keys
+4. From `frontend/`, run `npm run dev` to start both servers together
