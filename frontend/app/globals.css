@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@700&display=swap');
+@import "tailwindcss";
+
+:root {
+  --ink: #111111;
+  --card: #ffffff;
+  --pink: #ff5caa;
+  --blue: #3b82f6;
+  --pen-red: #f43f5e;
+  --approved-green: #22c55e;
+  --margin-amber: #f59e0b;
+}
+
+body {
+  color: var(--ink);
+  font-family: "Space Grotesk", ui-sans-serif, sans-serif;
+  background: linear-gradient(
+    125deg,
+    #d9e221 0%,
+    #7a8f1c 14%,
+    #16210f 32%,
+    #0a0f12 45%,
+    #141c2c 58%,
+    #3b4a5c 74%,
+    #cdc8ad 90%,
+    #f3efdb 100%
+  );
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+.font-display {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 700;
+}
+
+.font-stamp {
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+  font-weight: 700;
+}
+
+.title-chip {
+  display: inline-block;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.6);
+}
+
+.brutal-card {
+  background: var(--card);
+  border: 3px solid var(--ink);
+  border-radius: 0.75rem;
+  box-shadow: 8px 8px 0 var(--ink);
+}
+
+.brutal-btn {
+  background: var(--ink);
+  color: #ffffff;
+  border: 3px solid var(--ink);
+  border-radius: 0.6rem;
+  box-shadow: 6px 6px 0 var(--blue);
+  transition: transform 0.18s cubic-bezier(0.34, 1.56, 0.64, 1),
+    box-shadow 0.18s ease, background 0.18s ease;
+}
+
+.brutal-btn:hover:not(:disabled) {
+  transform: translate(-3px, -3px) scale(1.01);
+  box-shadow: 10px 10px 0 var(--blue);
+  background: #000000;
+}
+
+.brutal-btn:active:not(:disabled) {
+  transform: translate(2px, 2px) scale(0.99);
+  box-shadow: 2px 2px 0 var(--blue);
+}
+
+.brutal-btn:disabled {
+  box-shadow: none;
+  transform: none;
+}
+
+.brutal-input {
+  background: #fff;
+  border: 3px solid var(--ink);
+  border-radius: 0.6rem;
+  color: var(--ink);
+}
+
+input[type="file"]::file-selector-button {
+  transition: transform 0.15s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+input[type="file"]:hover::file-selector-button {
+  transform: translate(-1px, -1px);
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.75rem;
+  height: 1.75rem;
+  border: 2px solid var(--ink);
+  border-radius: 0.5rem;
+  color: var(--ink);
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.hairline {
+  border-top: 3px solid var(--ink);
+}
